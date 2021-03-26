@@ -1,0 +1,20 @@
+{
+  "name": "PD_UEA_Web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranciscoAguiar/PD_UEA_Web.git"
+  },
+  "keywords": [],
+  "author": "francisco aguiar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FranciscoAguiar/PD_UEA_Web/issues"
+  },
+  "homepage": "https://github.com/FranciscoAguiar/PD_UEA_Web#readme"
+}
