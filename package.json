@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/FranciscoAguiar/PD_UEA_Web/issues"
   },
-  "homepage": "https://github.com/FranciscoAguiar/PD_UEA_Web#readme"
+  "homepage": "https://github.com/FranciscoAguiar/PD_UEA_Web#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

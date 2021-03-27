@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Issues Tracking</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Preencha os dados abaixo para salvar a issue.</p>
+    <form action="<%= action %>" method="POST">
+      <p>
+        <label for="descricao" class="campo"> Descrição:</label>
+        <input
+          type="text"
+          name="descricao"
+          value="<%= issue.descricao %>"
+          autofocus
+        />
+      </p>
+      <p>
+        <label for="data" class="campo">Data: </label>
+        <input type="date" name="data" value="<%= issue.data %>" />
+      </p>
+      <p>
+        <label for="status" class="campo">Status:</label>
+        <select name="status">
+          <% const s = "selected" %>
+          <option <% if(issue.status === "Low") { %><%= s %><% } %>>Low </option>
+          <option <% if(issue.status === "Medium") { %><%= s %><% } %>>Medium</option>
+          <option <% if(issue.status === "High") { %><%= s %><% } %>>High</option>
+          <option <% if(issue.status === "Critical") { %><%= s %><% } %>>Critical</option>
+        </select>
+      </p>
+      <p>
+        <label for="responsavel" class="campo">Responsável: </label>
+        <input
+          type="text"
+          name="responsavel"
+          value="<%= issue.responsavel %>"
+        />
+      </p>
+      <p><a href="/">Cancelar</a> | <input type="submit" value="Salvar" /></p>
+    </form>
+  </body>
+</html>

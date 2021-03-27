@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Issues Tracking</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>Listagem de Issues</h1>
+    <table style="width: 80%">
+      <thead>
+        <tr style="background-color: #ccc">
+          <td style="width: 60%">Descrição</td>
+          <td style="width: 25%">Data</td>
+          <td style="width: 15%">Status</td>
+          <td style="width: 10%">Responsável</td>
+          <td>Ações</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% if(!issues || issues.length == 0) { %>
+        <tr>
+          <td colspan="5">Nenhuma Issue cadastrada</td>
+        </tr>
+        <% } else { issues.forEach(function(issue){ %>
+        <tr>
+          <td style="width: 50%"><%= issue.descricao %></td>
+          <td style="width: 10%"><%= issue.data %></td>
+          <td style="width: 10%"><%= issue.status %></td>
+          <td style="width: 30%"><%= issue.responsavel %></td>
+          <td>
+            <a href="/edit/<%= issue.id %>">Editar</a>
+            <a
+              href="/delete/<%= issue.id %>"
+              onclick="return confirm('Deseja excluir');"
+              >Excluir</a
+            >
+          </td>
+        </tr>
+        <% }) %> <%}%>
+      </tbody>
+
+      <tfoot>
+        <td colspan="5" align="center">
+          <a href="/newIssue">Adicionar nova Issue</a>
+        </td>
+      </tfoot>
+    </table>
+  </body>
+</html>
